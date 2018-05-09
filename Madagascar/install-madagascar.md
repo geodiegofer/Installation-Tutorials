@@ -2,7 +2,7 @@
 
 We followed http://www.ahay.org/wiki/Installation#Troubleshooting. Steps:
 
-1. Install the most recent anaconda version (python 3).
+1. Install the most recent anaconda (or miniconda) version (python 3).
 
 2. Set a python 2 environment:
 `conda create --name py2 python=2`
