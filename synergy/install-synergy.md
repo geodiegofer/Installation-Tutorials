@@ -2,8 +2,7 @@
 
 Synergy allows sharing the same mouse and keyboard on different computers.
 
-To install, follow [this]
-(https://www.howtogeek.com/316891/how-to-use-synergy-to-control-multiple-windows-pcs-with-one-keyboard/) 
+To install, follow [this](https://www.howtogeek.com/316891/how-to-use-synergy-to-control-multiple-windows-pcs-with-one-keyboard/) 
 
 Installing on Windows is straightforward. Just download the installer from sourceforge and run.
 
