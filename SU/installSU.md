@@ -55,7 +55,7 @@ cd ~/cwp/43R1/src
 make xtinstall
 ```
 
-# Possible problems
+# After installing: problems when sourcing SU libraries in your program
 1. Problems with compiler finding and linking things may arise. Read this tutorial: https://homepages.inf.ed.ac.uk/imurray2/compnotes/library_linking.txt .
 
 2. When compiling the compiler might not find `Complex.h`. Copying `Complex.h` (from wherever it is - use `find`) to ~/43R1/include may solve the problem.
