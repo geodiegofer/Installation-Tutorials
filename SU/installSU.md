@@ -56,4 +56,28 @@ make xtinstall
 ```
 
 # Possible problems
-When compiling the compiler might not find `Complex.h`. Copying `Complex.h` (from wherever it is - use `find`) to ~/43R1/include may solve the problem.
+1. Problems with compiler finding and linking things may arise. Read this tutorial: https://homepages.inf.ed.ac.uk/imurray2/compnotes/library_linking.txt .
+
+2. When compiling the compiler might not find `Complex.h`. Copying `Complex.h` (from wherever it is - use `find`) to ~/43R1/include may solve the problem.
+
+3. You might need to export a bunch of stuff, if the system does not read your includes (solutions if any of the problems in 1 appear):
+```sh
+# Finding stuff you need inside package folder
+find /home/username/ -name "*.err"
+find ~/victor-ROG2018/43R1 -name "Complex"
+
+# Exports for the compiling step
+echo "export CPATH=$CPATH:~/victor-ROG2018/43R1/:~/victor-ROG2018/43R1/bin:~/victor-ROG2018/43R1/include" >> ~/.bashrc
+echo "export CPATH=$CPATH:~/victor-ROG2018/43R1/src/:~/victor-ROG2018/43R1/src/Complex/include/" >> ~/.bashrc
+bash
+
+# Exports for the linking step
+echo "export LIBRARY_PATH=$LIBRARY_PATH:~/victor-ROG2018/43R1/:~/victor-ROG2018/43R1/bin:~/victor-ROG2018/43R1/include" >> ~/.bashrc
+echo "export LIBRARY_PATH=$LIBRARY_PATH:~/victor-ROG2018/43R1/src/:~/victor-ROG2018/43R1/src/Complex/include/" >> ~/.bashrc 
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/victor-ROG2018/43R1/src/:~/victor-ROG2018/43R1/src/Complex/include/" >> ~/.bashrc
+bash
+
+# Export for the linking step (CUDA libraries)
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> ~/.bashrc
+```
+The last export is not related to SU, but to using CUDA.
