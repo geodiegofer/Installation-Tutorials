@@ -55,3 +55,5 @@ cd ~/cwp/43R1/src
 make xtinstall
 ```
 
+# Possible problems
+When compiling the compiler might not find `Complex.h`. Copying `Complex.h` (from wherever it is - use `find`) to ~/43R1/include may solve the problem.
