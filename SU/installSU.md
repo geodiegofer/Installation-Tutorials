@@ -60,7 +60,7 @@ make xtinstall
 
 2. When compiling the compiler might not find `Complex.h`. Copying `Complex.h` (from wherever it is - use `find`) to ~/43R1/include may solve the problem.
 
-3. You might need to export a bunch of stuff, if the system does not read your includes (solutions if any of the problems in 1 appear):
+3. You might need to export a bunch of stuff, if the system does not read your includes (solutions if any of the problems in 1 appear; read the tutorial for a detailed explanation):
 ```sh
 # Finding stuff you need inside package folder
 find /home/username/ -name "*.err"
@@ -79,5 +79,6 @@ bash
 
 # Export for the linking step (CUDA libraries)
 echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64" >> ~/.bashrc
+bash
 ```
 The last export is not related to SU, but to using CUDA.
