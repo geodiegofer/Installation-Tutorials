@@ -19,10 +19,6 @@ sudo apt-get install libxt-dev
 make xtinstall
 ```
 
-Alter makefile to make CWPROOT variable equal to the place installed
-Example:
-CWPROOT = /home/linton/cwp/43R1
-
 # (OPTIONAL) Install nimage
 Copy nimage.c to ~/cwp/43R1/src/xplot/main
 Edit Makefile on ~/cwp/43R1/src/xplot/main, changing
