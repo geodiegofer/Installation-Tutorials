@@ -12,6 +12,7 @@ echo "export PATH=$PATH:~/cwp/43R1/bin" >> ~/.bashrc
 source ~/.bashrc
 
 cd $CWPROOT/src
+sudo apt-get install build-essential
 make install
 sudo apt-get install libx11-dev
 sudo apt-get install libxt-dev
